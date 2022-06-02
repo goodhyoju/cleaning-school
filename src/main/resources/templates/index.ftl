@@ -179,8 +179,8 @@
 
                 </div>
                 <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                    <div id="map" style="width:100%;height:300px;">
-                        <a href="http://kko.to/vfS9eVUyg"><img src="img/map.png" height="350px;"/></a>
+                    <div id="map" style="width:100%;height:400px;">
+                        <#--<a href="http://kko.to/vfS9eVUyg"><img src="img/map.png" height="350px;"/></a>-->
                     </div>
 
                 </div>
@@ -191,12 +191,12 @@
 
     <#include "/common/common_footer.ftl">
     <#include "/common/common_js.ftl">
-    <#--<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=699817b6a0cbbae4cc3ed7e9d1208db7&libraries=services,clusterer"></script>-->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=699817b6a0cbbae4cc3ed7e9d1208db7&libraries=services,clusterer"></script>
 
 </body>
 <script>
     $(document).ready(function() {
-       /* var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
             mapOption = {
                 center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
                 level: 3 // 지도의 확대 레벨
@@ -217,7 +217,7 @@
                 infowindow.open(map, marker);
                 map.setCenter(coords);
             }
-        });*/
+        });
     });
 </script>
 </html>
