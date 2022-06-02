@@ -1,0 +1,15 @@
+server:
+  port : 8083
+spring:
+  application:
+    name: home
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  freemarker:
+    suffix: .ftl
+    cache: true
+  main:
+    banner-mode: off
