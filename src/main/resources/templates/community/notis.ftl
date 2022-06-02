@@ -17,11 +17,11 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container-fluid bg-primary py-5 mb-5 page-header4">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">청소 창업반</h1>
+                    <h1 class="display-3 text-white animated slideInDown">공지사항</h1>
                 </div>
             </div>
         </div>
@@ -33,38 +33,120 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">교육안내</h6>
-                <h4 class="mb-5">교육 수강 후 청소전문 업체를 창업하고자 희망하는 수강생들을 대상으로 구성된 커리큘럼</h4>
+                <h6 class="section-title bg-white text-center text-primary px-3">공지사항 안내</h6>
             </div>
 
             <div class="row">
-                <div class="col-md-6 offset-md-3" style="font-size: 20px;" data-wow-delay="0.2s">
-                    <table class="table table-hover">
-                        <tbody>
-                            <tr>
-                                <td class="bg-dark text-white text-center" style="border-radius: 30px 0 0 30px;"><i class="fa fa-check"></i> 교육일수</td>
-                                <td>24일 완성 / 월~금요일 09:30~17:30</td>
-                            </tr>
-                            <tr>
-                                <td class="bg-dark text-white text-center" style="border-radius: 30px 0 0 30px;"><i class="fa fa-check"></i> 교육인원</td>
-                                <td>20명</td>
-                            </tr>
-                            <tr>
-                                <td class="bg-dark text-white text-center" style="border-radius: 30px 0 0 30px;"><i class="fa fa-check"></i> 훈련대상</td>
-                                <td>청소대행업 창업을 희망하시는 수강생</td>
-                            </tr>
-                            <tr>
-                                <td class="bg-dark text-white text-center" style="border-radius: 30px 0 0 30px;"><i class="fa fa-check"></i> 수강료</td>
-                                <td>1,124,500(VAT별도)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <!-- table start -->
+                <table id="notiTable" class="ui celled table hover display nowrap" style="width:100%">
+                    <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>구분</th>
+                        <th>제목</th>
+                        <th>내용</th>
+                        <th>작성일</th>
+                        <th>작성자</th>
+                        <th>조회수</th>
+                    </tr>
+                    </thead>
+                </table>
+                <!-- table end -->
             </div>
         </div>
     </div>
     <!-- Testimonial End -->
-        
+    <!-- Modal start -->
+    <div class="modal fade" id="addNotisModal" tabindex="-1" role="dialog" aria-labelledby="addNotisModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addNotisModalLabel">공지사항 입력</h5>
+                    <a id="addNotisCloseBtn"><span class="text-dark fw-bold">x</span> </a>
+                </div>
+                <div class="modal-body" style="z-index: 1">
+                    <div class="col-md-12">
+                        <div class="row g-2">
+                            <div class="col-md-12">
+                                <label for="notisType"><i class="fa fa-check"></i>서비스</label>
+                                <select class="form-select border-1 py-3" id="notisType">
+                                    <option value="공지사항" selected>공지사항</option>
+                                    <option value="이벤트">이벤트</option>
+                                    <option value="장애알림">장애알림</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="notisTitle"><i class="fas fa-edit"></i>제목</label>
+                                <input type="text" id="notisTitle" class="form-control border-1 py-3">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="notisComment"><i class="fas fa-edit"></i>내용</label>
+                                <textarea type="text" id="notisComment" class="form-control border-1 py-3" cols="3"> </textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="notisWriter"><i class="fa fa-check"></i>작성자</label>
+                                <select class="form-select border-1 py-3" id="notisWriter">
+                                    <option value="운영자" selected>운영자</option>
+                                    <option value="고객센터">고객센터</option>
+                                    <option value="상담원">상담원</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-success" id="addNotisSaveBtn"><i class="fa fa-check"></i> 저장</button>
+                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" id="addNotisCancelBtn"><i class="fa fa-times"></i> 취소</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+
+
+    <!-- Modal start -->
+    <div class="modal fade" id="viewNotisModal" tabindex="-1" role="dialog" aria-labelledby="viewNotisModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewNotisModalLabel">공지사항</h5>
+                    <a id="viewNotisCloseBtn"><span class="text-dark fw-bold">x</span> </a>
+                </div>
+                <div class="modal-body" style="z-index: 1">
+                    <div class="col-md-12">
+                        <div class="row g-2">
+                            <div class="col-md-12">
+
+
+                                <div class="owl-item" style="width: 100%;"><div class="testimonial-item bg-light rounded p-3">
+                                        <div class="bg-white border rounded p-4">
+
+                                            <div class="d-flex align-items-center">
+                                                <img class="img-fluid flex-shrink-0 rounded" src="img/icon-alert.png" style="width: 45px; height: 45px;">
+                                                <div class="ps-3">
+                                                    <h6 class="fw-bold mb-1" id="viewNotisTitle"></h6>
+                                                    <small id="viewNotisWriter"></small>
+                                                </div>
+                                            </div>
+                                            <p id="viewNotisComment" class="mt-1 mb-0"></p>
+                                        </div>
+                                    </div></div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" id="viewNotisCancelBtn"><i class="fa fa-times"></i> 닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
 
     <!-- Footer Start -->
     <#include "/common/common_footer.ftl">
@@ -72,6 +154,7 @@
 
     <!-- JavaScript Libraries -->
     <#include "/common/common_js.ftl">
+    <script src="page/notis.js"></script>
 </body>
 
 </html>

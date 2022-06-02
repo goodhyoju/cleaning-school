@@ -202,6 +202,45 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.page-header2 {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page-header3 {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header4 {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/notis-main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header5 {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/reservation-main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page-header6 {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/qna-main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header7 {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/schedule-main.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .page-header-inner {
     background: rgba(15, 23, 43, .7);
@@ -431,4 +470,33 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+.alCenter{text-align: center;}
+.alRight{text-align: right;}
+.alLeft{text-align: left;}
+
+td.details-control {
+    background: url('../img/details_open.png') no-repeat center center;
+    background-size: 20px;
+    cursor: pointer;
+}
+tr.details td.details-control {
+    background: url('../img/details_close.png') no-repeat center center;
+    background-size: 20px;
+}
+.picker {
+    border-radius: 5px;
+    width: 100%;
+    height: 36px;
+    cursor: pointer;
+    -webkit-transition: all linear .2s;
+    -moz-transition: all linear .2s;
+    -ms-transition: all linear .2s;
+    -o-transition: all linear .2s;
+    transition: all linear .2s;
+    border: thin solid #eee;
+}
+.picker:hover {
+    transform: scale(1.1);
 }
